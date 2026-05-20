@@ -1,54 +1,92 @@
-# roadmap-data
+<div align="center">
 
-GenSilicon **AI EDA Roadmap** 的数据源 —— 当前阶段只覆盖**厂商产品时间轴**(`vendors/`),后续可能扩展自主等级、失效模式等数据。
+# 🗺️ Roadmap Data
 
-被 [chipai-hub](https://github.com/GenSilicon/chipai-hub)(网站后端)hourly 拉取并通过 `/api/vendors` 提供给前端 `Roadmap → 厂商图谱` 视图。
+**A community-curated timeline of how the EDA industry is shipping AI.**
 
-## 仓库布局
+DSO.ai · Cerebrus · Aprisa AI · SimAI · ChipStack · …
+
+[![License](https://img.shields.io/badge/data-CC--BY--4.0-blue.svg)](LICENSE)
+![Vendors](https://img.shields.io/badge/vendors-6-brightgreen)
+![Products](https://img.shields.io/badge/products-21-purple)
+![Live](https://img.shields.io/badge/live-gen--silicon.com%2Froadmap-success)
+
+</div>
+
+---
+
+## ✨ What this is
+
+A structured record of **AI / Agentic EDA products** released by traditional EDA vendors (Synopsys / Cadence / Siemens EDA / Ansys) and Chinese players (Empyrean / X-EPIC / …) — when they shipped, what they do, and which part of the design flow they touch.
+
+Each entry is one PR away from showing up on the public timeline at **[gen-silicon.com/roadmap](https://gen-silicon.com/roadmap)**.
+
+> **Why?** AI EDA has gone from a curiosity in 2020 to a full-on agentic race in 2026. There's no single place to see the cadence — vendor sites bury it in marketing, news articles drift out of date. This repo is the canonical, dated, source-cited list.
+
+---
+
+## 📁 Repository layout
 
 ```
 vendors/
-├── synopsys.yaml        # 一家公司一个 yaml
-├── cadence.yaml
-├── siemens.yaml
-├── ansys.yaml
-├── empyrean.yaml        # 华大九天
-├── xepic.yaml           # 芯华章
-└── ...
+├── synopsys.yaml        # Synopsys.ai suite (DSO/VSO/TSO/ASO + Copilot)
+├── cadence.yaml         # Cerebrus / Verisium / JedAI / Cadence.AI / ChipStack
+├── siemens.yaml         # Solido / Calibre ML / Aprisa AI / Catapult AI HLS
+├── ansys.yaml           # RedHawk-SC ML / SimAI / AnsysGPT
+├── empyrean.yaml        # 华大九天 — ALPS-GT
+└── xepic.yaml           # 芯华章 — GalaxFV
 ```
 
-## 加一个新厂商 / 新产品
+One YAML per vendor. New vendors → drop a new file. New products → append to an existing file.
 
-1. 在 `vendors/<vendor-id>.yaml` 里追加产品(或新建一个 yaml 文件)。
-2. 提交 PR,描述里**附上信息来源**(官网新闻稿 / 媒体报道 / 论文)。
-3. 合并后,网站会在下一个整点 + 7 分钟自动同步;也可以联系维护者立即触发 `/api/vendors/refresh`。
+---
 
-> **数据准确性原则**:每条产品**必须有公开来源可核实**,不接受"业内传闻"、"按命名套路推测"。如果某产品的发布日期不确定到月份,只填年份(`date: '2024'`),不要硬填月份。
-
-## yaml 字段说明
+## 📐 Schema
 
 ```yaml
-id: synopsys                # 全站唯一 slug
-name: Synopsys              # 显示名(英文)
-nameCn: 新思科技             # 显示名(中文,可选)
+id: synopsys                # globally unique slug
+name: Synopsys              # display name (English)
+nameCn: 新思科技             # display name (Chinese, optional)
 region: us                  # us | eu | cn
-color: '#22d3ee'            # 主色 hex,用于泳道 / 节点高光
-accent: '#7c3aed'           # 副色(可选,渐变末端)
-tagline: 一句话定位
+color: '#22d3ee'            # primary brand color (hex)
+accent: '#7c3aed'           # secondary color for gradients (optional)
+tagline: One-line positioning sentence
 url: https://www.synopsys.com/ai.html
 
 products:
   - name: DSO.ai
-    date: '2020-03'          # YYYY 或 YYYY-MM,引号必加
-    stage: ga                # announced | shipped | ga | discontinued
-    capabilities:            # 可多选
-      - digital-impl         # digital-impl | verification | analog | signoff
-                             # | dft | pcb | copilot | multi-physics | foundation
-    summary: 一句话功能描述
-    url: https://...         # 可选
-    highlight: true          # 可选,标志性产品在时间轴放大显示
+    date: '2020-03'                # 'YYYY' or 'YYYY-MM' (always quoted)
+    stage: ga                      # announced | shipped | ga | discontinued
+    capabilities:                  # tag list, multi-select
+      - digital-impl               # digital-impl | verification | analog
+                                   # | signoff | dft | pcb | copilot
+                                   # | multi-physics | foundation
+    summary: One-sentence functional description, ≤ 60 Chinese chars.
+    url: https://...               # source link (optional)
+    highlight: true                # mark as a milestone product (optional)
 ```
 
-## License
+---
 
-数据为公开信息整理,采用 CC-BY-4.0 协议;贡献者请确保使用的来源允许转述。
+## 🤝 Contributing
+
+1. **Fork** this repo and edit the relevant `vendors/*.yaml` (or add a new one).
+2. **Cite the source** in your PR description — official press release, vendor news page, or reputable trade media. We don't accept "industry rumors" or guesses.
+3. **If you're not sure of the exact month**, just use the year (`date: '2024'`) — never invent a month.
+4. Submit the PR. Reviewer will sanity-check against the source, then merge.
+
+> Spotted a wrong date or a missing product? Open an issue with a link and we'll get it fixed.
+
+---
+
+## 🧭 Editorial principles
+
+- **Verifiability over coverage** — we'd rather have 15 entries that are all correct than 50 with a few fabrications.
+- **Public sources only** — analyst-leaked, embargoed, or insider info doesn't qualify.
+- **Brand neutrality** — every vendor's tagline is written in their own marketing voice, then copy-edited for clarity. No editorializing.
+
+---
+
+## 📜 License
+
+Data published under **CC-BY-4.0**. You're welcome to mirror, embed, or build on it — please credit `GenSilicon/roadmap-data` and link back so updates flow.
