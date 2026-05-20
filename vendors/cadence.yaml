@@ -1,0 +1,60 @@
+id: cadence
+name: Cadence
+nameCn: 楷登电子
+region: us
+color: '#10b981'
+accent: '#06b6d4'
+tagline: Cerebrus 主导数字闭环；JedAI 平台串联全套 .AI 产品
+url: https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/ai-driven-eda.html
+
+products:
+  - name: Cerebrus Intelligent Chip Explorer
+    date: '2021-07'
+    stage: ga
+    capabilities: [digital-impl]
+    summary: 基于 RL 的数字实现自动化，PPA 提升 10×、生产力 10×。
+    url: https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/cerebrus-intelligent-chip-explorer.html
+    highlight: true
+
+  - name: Verisium AI-Driven Verification
+    date: '2022-09'
+    stage: ga
+    capabilities: [verification]
+    summary: 大数据 + ML 加速调试 / 覆盖率收敛 / 回归回放。
+    url: https://www.cadence.com/en_US/home/tools/system-design-and-verification/ai-driven-verification.html
+
+  - name: Optimality Explorer
+    date: '2022-10'
+    stage: ga
+    capabilities: [multi-physics]
+    summary: CFD / 多物理智能优化器。
+
+  - name: Allegro X AI
+    date: '2023-06'
+    stage: ga
+    capabilities: [pcb]
+    summary: PCB 自动布线与拓扑生成。
+
+  - name: JedAI Platform
+    date: '2023-09'
+    stage: ga
+    capabilities: [foundation]
+    summary: 统一数据/模型平台，把 .AI 产品（Cerebrus / Verisium / Optimality）串成生态。
+    url: https://www.cadence.com/en_US/home/tools/jedai-platform.html
+    highlight: true
+
+  - name: Cadence.AI (Agent Suite)
+    date: '2024-03'
+    stage: shipped
+    capabilities: [copilot, foundation]
+    summary: Agent 化的端到端流程，跨工具自然语言控制。
+    url: https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2024/cadence-unveils-cadence-ai.html
+    highlight: true
+
+  - name: ChipStack
+    date: '2026-02'
+    stage: shipped
+    capabilities: [copilot, foundation, digital-impl, verification]
+    summary: 面向前端芯片设计与验证的 AI 超级智能体，Cadence 称为业界首个端到端 agentic 设计 / 验证工作流。
+    url: https://www.eet-china.com/news/202602125797.html
+    highlight: true

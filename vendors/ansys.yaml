@@ -1,0 +1,29 @@
+id: ansys
+name: Ansys
+nameCn: 安世亚太
+region: us
+color: '#f59e0b'
+accent: '#ef4444'
+tagline: 多物理 / SI / 功耗签核中的 ML 加速器与设计代理
+url: https://www.ansys.com/ai
+
+products:
+  - name: RedHawk-SC + ML
+    date: '2021'
+    stage: ga
+    capabilities: [signoff, multi-physics]
+    summary: IR-drop / EM 签核加入 ML 预测器，分析时间大幅缩短。
+
+  - name: SimAI
+    date: '2024-01'
+    stage: shipped
+    capabilities: [multi-physics, foundation]
+    summary: 通用 3D 仿真大模型，几何 → 物理场预测，10⁴× 加速。
+    url: https://www.ansys.com/products/ai/ansys-simai
+    highlight: true
+
+  - name: AnsysGPT
+    date: '2024'
+    stage: shipped
+    capabilities: [copilot]
+    summary: 面向 Ansys 工具的对话式知识助手。

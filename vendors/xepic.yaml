@@ -1,0 +1,15 @@
+id: xepic
+name: X-EPIC
+nameCn: 芯华章
+region: cn
+color: '#7c3aed'
+accent: '#22d3ee'
+tagline: 验证为本，GalaxEDA 全流程验证套件
+url: https://www.x-epic.com/
+
+products:
+  - name: GalaxFV (形式验证)
+    date: '2022'
+    stage: ga
+    capabilities: [verification]
+    summary: 国产 FPV，覆盖 SVA / 等价性 / 安全性属性。

@@ -1,0 +1,37 @@
+id: siemens
+name: Siemens EDA
+nameCn: 西门子 EDA
+region: eu
+color: '#0ea5e9'
+accent: '#f97316'
+tagline: Solido ML 切入模拟 / 验证；Aprisa AI / Calibre ML 覆盖实现签核
+url: https://eda.sw.siemens.com/en-US/ai/
+
+products:
+  - name: Solido Variation Designer
+    date: '2018'
+    stage: ga
+    capabilities: [analog]
+    summary: 统计抽样与机器学习驱动的 PVT / Monte Carlo 优化（被 Siemens 收购后并入）。
+    url: https://eda.sw.siemens.com/en-US/ic/solido/
+
+  - name: Calibre Machine Learning OPC
+    date: '2020'
+    stage: ga
+    capabilities: [multi-physics, signoff]
+    summary: ML 加速光学邻近修正，运算时间大幅压缩。
+
+  - name: Aprisa AI / Aprisa Cell Synthesis
+    date: '2023-09'
+    stage: shipped
+    capabilities: [digital-impl]
+    summary: 布线 / P&R 自动化套件，先进工艺标准单元自合成。
+    url: https://eda.sw.siemens.com/en-US/ic/aprisa/
+    highlight: true
+
+  - name: Catapult AI HLS
+    date: '2024-09'
+    stage: shipped
+    capabilities: [digital-impl, foundation]
+    summary: HLS + LLM 协同，从算法描述到 RTL。
+    highlight: true

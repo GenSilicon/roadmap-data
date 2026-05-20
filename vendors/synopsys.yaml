@@ -1,0 +1,44 @@
+id: synopsys
+name: Synopsys
+nameCn: 新思科技
+region: us
+color: '#22d3ee'
+accent: '#7c3aed'
+tagline: 从 DSO.ai 起步，扩展到全流程 Synopsys.ai 套件 + Copilot
+url: https://www.synopsys.com/ai.html
+
+products:
+  - name: DSO.ai
+    date: '2020-03'
+    stage: ga
+    capabilities: [digital-impl]
+    summary: 业内首个商用 AI 驱动的数字设计空间探索引擎，强化学习自动收敛 PPA。
+    url: https://www.synopsys.com/implementation-and-signoff/ml-ai-design/dso-ai.html
+    highlight: true
+
+  - name: VSO.ai
+    date: '2023-03'
+    stage: ga
+    capabilities: [verification]
+    summary: 验证空间优化，自动生成激励 / 减少冗余仿真、加速覆盖率收敛。
+    url: https://www.synopsys.com/verification/ai-driven-verification.html
+
+  - name: TSO.ai
+    date: '2023-03'
+    stage: ga
+    capabilities: [dft]
+    summary: 测试空间优化，自动选择 ATPG 模式压缩测试图样。
+
+  - name: Synopsys.ai Copilot
+    date: '2023-09'
+    stage: shipped
+    capabilities: [copilot, foundation]
+    summary: 与 Microsoft / OpenAI 合作的工具内自然语言助手，覆盖 RTL / 验证 / 实现。
+    url: https://news.synopsys.com/2023-09-19
+    highlight: true
+
+  - name: ASO.ai
+    date: '2024-03'
+    stage: ga
+    capabilities: [analog]
+    summary: 模拟设计迁移与 sizing 自动化，工艺切换提速 10×。

@@ -1,0 +1,15 @@
+id: empyrean
+name: Empyrean
+nameCn: 华大九天
+region: cn
+color: '#ec4899'
+accent: '#8b5cf6'
+tagline: 国产模拟 / 数字 EDA 龙头，AI 加速器陆续接入主力工具链
+url: https://empyrean.com.cn/
+
+products:
+  - name: ALPS-GT (GPU 加速 SPICE)
+    date: '2022'
+    stage: ga
+    capabilities: [analog]
+    summary: 面向先进工艺的并行 SPICE 仿真器，速度 / 精度大幅提升。
